@@ -46,7 +46,6 @@ st.divider()
 # 4. Dashboard Logic
 selected_night_path = base_dir / selected_night
 if selected_graph == 'Down-TT Strain Gauge':
-    # We need BOTH files to run the calibration
     sg_files = list(selected_night_path.glob('*clmpstraingauge*.npz'))
     dtt_files = list(selected_night_path.glob('*downtiptilt*.npz'))
     
@@ -62,7 +61,7 @@ if selected_graph == 'Down-TT Strain Gauge':
             sg_data = np.load(sg_file)
             dtt_data = np.load(dtt_file)
             
-            st.write("### 📊 Select Graphs to Display")
+            st.write("### Select Graphs to Display")
             graph_choices = [
                 'Strain Gauge Sequence (By Sample)',
                 'Multi-Axis Calibration (Actual vs Expected)',
@@ -78,7 +77,7 @@ if selected_graph == 'Down-TT Strain Gauge':
                     dtt_strain = sg_data['DTTStrainGauge']
                     x_axis = np.arange(dtt_strain.shape[0])
                     
-                    st.write("*(💡 **Tip:** Use the slider below the graph to scrub and zoom!)*")
+                    st.write("*(Use the slider below the graph to scrub and zoom)*")
                     fig = go.Figure()
                     for i in range(dtt_strain.shape[1]):
                         fig.add_trace(go.Scatter(x=x_axis, y=dtt_strain[:, i], mode='lines', name=f'Channel {i}', line=dict(width=1), opacity=0.7))
@@ -95,7 +94,7 @@ if selected_graph == 'Down-TT Strain Gauge':
                 # 2. CALIBRATION GRAPHS (Matplotlib)
                 if 'Multi-Axis Calibration (Actual vs Expected)' in selected_subgraphs or 'Percent Realized vs Expected Strain' in selected_subgraphs:
                     st.write("---")
-                    st.write("### 🧮 Calibration Analysis")
+                    st.write("### Calibration Analysis")
                     
                     # Extract and interpolate
                     sg_time = sg_data['rawtimestamp']
@@ -190,7 +189,7 @@ elif selected_graph == 'Up-TT Strain Gauge':
             sg_data = np.load(sg_file)
             utt_data = np.load(utt_file)
             
-            st.write("### 📊 Select Graphs to Display")
+            st.write("### Select Graphs to Display")
             graph_choices = [
                 'Strain Gauge Sequence (By Sample)',
                 'Multi-Axis Calibration (Actual vs Expected)',
@@ -205,7 +204,7 @@ elif selected_graph == 'Up-TT Strain Gauge':
                     utt_strain = sg_data['UTTMainStrainGauge']
                     x_axis = np.arange(utt_strain.shape[0])
                     
-                    st.write("*(💡 **Tip:** Use the slider below the graph to scrub and zoom!)*")
+                    st.write("*(Use the slider below the graph to scrub and zoom)*")
                     fig = go.Figure()
                     for i in range(utt_strain.shape[1]):
                         fig.add_trace(go.Scatter(x=x_axis, y=utt_strain[:, i], mode='lines', name=f'Channel {i}', line=dict(width=1), opacity=0.7))
@@ -221,7 +220,7 @@ elif selected_graph == 'Up-TT Strain Gauge':
 
                 if 'Multi-Axis Calibration (Actual vs Expected)' in selected_subgraphs or 'Percent Realized vs Expected Strain' in selected_subgraphs:
                     st.write("---")
-                    st.write("### 🧮 Calibration Analysis")
+                    st.write("### Calibration Analysis")
                     
                     sg_time = sg_data['rawtimestamp']
                     cmd_time = utt_data['rawtimestamp']
@@ -320,7 +319,7 @@ elif selected_graph == 'Up Tip Tilt':
             x_axis = np.arange(total_samples)
             
             # --- DYNAMIC GRAPH SELECTOR ---
-            st.write("### 📊 Select Graphs to Display")
+            st.write("### Select Graphs to Display")
             graph_choices = [
                 'Tip Distribution (Histogram)',
                 'Tilt Distribution (Histogram)',
@@ -335,7 +334,8 @@ elif selected_graph == 'Up Tip Tilt':
             if not selected_subgraphs:
                 st.warning("Please select at least one graph from the dropdown menu above.")
             else:
-                st.write("*(💡 **Tip:** Sequence graphs are interactive—click and drag to zoom/pan. Histograms are static.)*")
+                st.writest.write("*(Tip: Sequence graphs are interactive—click and drag to zoom/pan. Histograms are static.)*"
+)
                 
                 # --- HYBRID PLOTTING (Matplotlib + Plotly) ---
                 for i in range(0, len(selected_subgraphs), 2):
@@ -425,7 +425,7 @@ elif selected_graph == 'Down Tip Tilt':
             x_axis = np.arange(total_samples)
             
             # --- DYNAMIC GRAPH SELECTOR ---
-            st.write("### 📊 Select Graphs to Display")
+            st.write("### Select Graphs to Display")
             graph_choices = [
                 'Tip Distribution (Histogram)',
                 'Tilt Distribution (Histogram)',
@@ -440,7 +440,7 @@ elif selected_graph == 'Down Tip Tilt':
             if not selected_subgraphs:
                 st.warning("Please select at least one graph from the dropdown menu above.")
             else:
-                st.write("*(💡 **Tip:** Sequence graphs are interactive—click and drag to zoom/pan. Histograms are static.)*")
+                st.write("*(Tip: Sequence graphs are interactive—click and drag to zoom/pan. Histograms are static.)*")
                 
                 # --- HYBRID PLOTTING (Matplotlib + Plotly) ---
                 # We build the layout row by row, 2 columns per row
@@ -507,7 +507,7 @@ elif selected_graph == 'Down Tip Tilt':
             
             
             
-            
+         
             
             
 elif selected_graph == 'Shack Hartmann WFS Data':
