@@ -5,4 +5,4 @@ RECENTLY ADDED:
 KNOWN ISSUES:
 1. SHWFS ocam plot gets smushed into a rectangle for some files
 2. no DTT data for some files (maybe naming issue?)
-6. sometimes weird UTT/DTT strain gauge graphs?
+6. sometimes DTT strain gauge shows no plotting
