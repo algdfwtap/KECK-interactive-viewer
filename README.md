@@ -1,3 +1,7 @@
+RECENTLY ADDED:
+fixed UTT strain gauge plotting
+added new dropdown for LGS/NGS
+
 KNOWN ISSUES:
 1. SHWFS ocam plot gets smushed into a rectangle for some files
 2. no DTT data for some files (maybe naming issue?)
