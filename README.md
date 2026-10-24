@@ -1,3 +1,10 @@
+FUTURE IMPLEMENTATIONS
+1. Add option for log scale
+2. add plotting for temporal and spatial power spectra
+3. add residuals plotting for pseudo open loops vs closed loops
+4. derive r0, tau0, theta0 from temporal tip/tilt
+
+
 RECENTLY ADDED:
 1. fixed UTT strain gauge plotting
 2. added new dropdown for LGS/NGS
