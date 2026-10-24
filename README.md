@@ -1,5 +1,5 @@
 FUTURE IMPLEMENTATIONS
-1. Add option for log scale
+1. Add option for log scale (for 2.)
 2. add plotting for temporal and spatial power spectra
 3. add residuals plotting for pseudo open loops vs closed loops
 4. derive r0, tau0, theta0 from temporal tip/tilt
