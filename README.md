@@ -12,6 +12,6 @@ RECENTLY ADDED:
 
 KNOWN ISSUES:
 1. SHWFS ocam plots for 4 subaps (only last 1000 frames line up)
-2. no DTT slope data for some LGS files (solved)
+2. no DTT slope data for some LGS files (solved, sometimes we just don't have DTT slope data...)
 6. sometimes strain gauge shows no plotting (solved, this happens when strain gauges pick up no strain)
 7. weird graphs for DTT strain gauge and UTT strain gauge (solved, happens when mirror not getting any commands)
