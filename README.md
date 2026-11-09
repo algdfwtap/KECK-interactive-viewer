@@ -1,5 +1,5 @@
 FUTURE IMPLEMENTATIONS
-1. spatial and temporal psd / POL graphs -> confirm parameters
+1. spatial and temporal psd / POL / rejection graphs -> confirm parameters
 2. add r0, tau0, theta0 calculations -> a lot of work to do 
 
 
