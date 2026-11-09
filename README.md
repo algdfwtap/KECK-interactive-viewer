@@ -1,14 +1,12 @@
 FUTURE IMPLEMENTATIONS
-1. Add option for log scale (for 2.)
-2. add plotting for temporal and spatial power spectra
-3. add residuals plotting for pseudo open loops vs closed loops
-4. derive r0, tau0, theta0 from temporal tip/tilt
+1. spatial and temporal psd / POL graphs -> confirm parameters
+2. add r0, tau0, theta0 calculations -> a lot of work to do 
 
 
 RECENTLY ADDED:
-1. fixed UTT strain gauge plotting
-2. added new dropdown for LGS/NGS
-3. fixed SHWFS plotting
+1. changed file selection to left sidebar
+2. added TT psd with log option
+3. added spatial psd and temporal psd with POL estimate and rejection function
 
 KNOWN ISSUES:
 1. SHWFS ocam plots for 4 subaps (only last 1000 frames line up)
